@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2D Racing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <h1>Neon Sprint</h1>
+        <p>Use ⬅️ ➡️ to steer and ⬆️ to boost. Avoid traffic and survive as long as you can.</p>
+      </header>
+      <section class="hud">
+        <div>Speed: <span id="speed">0</span> km/h</div>
+        <div>Distance: <span id="distance">0</span> m</div>
+        <div>Best: <span id="best">0</span> m</div>
+        <button id="restart" type="button">Restart</button>
+      </section>
+      <canvas id="game" width="420" height="640" aria-label="2D racing game" role="img"></canvas>
+      <footer>
+        <p>Tip: Keep to the center lane to dodge sudden traffic.</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

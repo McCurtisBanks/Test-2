@@ -1,0 +1,93 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --bg: #0f0f1a;
+  --panel: #1a1d2f;
+  --accent: #39ffcc;
+  --accent-soft: rgba(57, 255, 204, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, #2a2f4a 0%, #0b0c14 55%);
+  color: #f5f7ff;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.game-shell {
+  display: grid;
+  gap: 16px;
+  max-width: 520px;
+  width: 100%;
+}
+
+header {
+  background: var(--panel);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+header h1 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: rgba(245, 247, 255, 0.75);
+  font-size: 0.95rem;
+}
+
+.hud {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  align-items: center;
+  background: rgba(26, 29, 47, 0.75);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hud div {
+  font-weight: 600;
+}
+
+#restart {
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  color: #091019;
+  font-weight: 700;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#restart:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px var(--accent-soft);
+}
+
+canvas {
+  width: 100%;
+  background: linear-gradient(#30364f, #151625 55%);
+  border-radius: 18px;
+  border: 2px solid rgba(57, 255, 204, 0.3);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  color: rgba(245, 247, 255, 0.65);
+  font-size: 0.85rem;
+  text-align: center;
+}
